@@ -54,4 +54,4 @@ class MainClass(Resource):
 
 # Run terminal: FLASK_APP=app.py flask run
 if __name__ == '__main__':
-    flask_app.run(debug=True, use_reloader=False)  # `use_reloader=False` = flask not reload twice, but not reload when changes
+    flask_app.run(host='0.0.0.0', debug=True, use_reloader=False)  # `use_reloader=False` = flask not reload twice, but not reload when changes

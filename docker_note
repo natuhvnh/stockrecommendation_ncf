@@ -1,0 +1,22 @@
+1. Run container
+- sudo docker run <container name>:<version>
+Eg: sudo docker run redis => latest version of redis
+2. Host, Port
+- Default: 127.17.0.2 (only for internal)
+- Map port: docker run -p <container port>:<host port> ... => acces via 192.168.x.x:80
+- Or: docker run <image name> --network=host
+3. Data
+- If sudo docker rm ... => all data in container will be removed
+- Need to map data to external dir: sudo docker run -v <external dir>:<container dir> <container name>
+4. Find detail about container
+sudo docker inspect <container name>
+5. Build image
+- Create docker file
+- Create image: sudo docker build -t <image name> .
+6. Run container
+sudo docker run -it -p xx:xxxx <image name>
+=> connect localhost:xxxx
+7. Get list of images
+sudo docker images
+8. Delete image
+sudo docker image rm <image name or id> --force
